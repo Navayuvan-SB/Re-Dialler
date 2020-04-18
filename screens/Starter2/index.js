@@ -2,21 +2,21 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import {StyleSheet} from 'react-native';
 
-export default class Home extends React.Component {
-	render() {
-		return (
-			<View style={styles.container}>
-				<Text>Empty Code..!</Text>
-			</View>
-		);
-	}
+export default class Starter2 extends React.Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text>Empty Code..!</Text>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center',
-	},
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });

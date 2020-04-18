@@ -1,8 +1,9 @@
 import React from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text} from 'react-native';
 import {StyleSheet} from 'react-native';
+import ReButton from '../../components/Button/index';
 
-export default class Home extends React.Component {
+export default class Starter1 extends React.Component {
   render() {
     return (
       <View style={styles.container}>
@@ -12,9 +13,7 @@ export default class Home extends React.Component {
         </View>
 
         <View style={styles.buttonLayout}>
-          <TouchableOpacity style={styles.buttonContainer} activeOpacity={0.8}>
-            <Text style={styles.buttonText}>Get Started ></Text>
-          </TouchableOpacity>
+          <ReButton>Get Started ></ReButton>
         </View>
       </View>
     );
