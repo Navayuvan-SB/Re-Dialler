@@ -16,11 +16,18 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
+const appTheme = {
+  dark: true,
+  colors: {
+    background: 'rgb(33,33,33)',
+  },
+};
+
 const App: () => React$Node = () => {
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={appTheme}>
       <Stack.Navigator>
-        <Stack.Screen name="Starter1" component={Starter1} />
+        <Stack.Screen name=" " component={Starter1} />
         <Stack.Screen name="Starter2" component={Starter2} />
         <Stack.Screen name="History" component={History} />
         <Stack.Screen name="Home" component={Home} />
