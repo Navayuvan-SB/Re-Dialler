@@ -43,11 +43,13 @@ const styles = StyleSheet.create({
     color: 'rgb(20, 255, 236)',
     fontSize: 34,
     fontWeight: '400',
+    fontFamily: 'Raleway-Regular',
   },
   normalText: {
     color: 'rgb(20, 255, 236)',
     fontSize: 38,
     fontWeight: '600',
+    fontFamily: 'Raleway-Regular',
   },
   buttonContainer: {
     backgroundColor: 'rgb(20, 255, 236)',
@@ -58,5 +60,6 @@ const styles = StyleSheet.create({
     paddingHorizontal: 40,
     color: 'rgb(33, 33, 33)',
     fontSize: 20,
+    fontFamily: 'Raleway-Bold',
   },
 });
