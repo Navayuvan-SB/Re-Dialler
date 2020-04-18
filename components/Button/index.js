@@ -5,7 +5,10 @@ import {StyleSheet} from 'react-native';
 export default class ReButton extends React.Component {
   render() {
     return (
-      <TouchableOpacity style={styles.buttonContainer} activeOpacity={0.8}>
+      <TouchableOpacity
+        style={styles.buttonContainer}
+        activeOpacity={0.8}
+        onPress={this.props.onClick}>
         <Text style={styles.buttonText}>{this.props.children}</Text>
       </TouchableOpacity>
     );

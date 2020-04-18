@@ -13,7 +13,12 @@ export default class Starter1 extends React.Component {
         </View>
 
         <View style={styles.buttonLayout}>
-          <ReButton>Get Started ></ReButton>
+          <ReButton
+            onClick={() => {
+              this.props.navigation.navigate('Starter2');
+            }}>
+            Get Started >
+          </ReButton>
         </View>
       </View>
     );
