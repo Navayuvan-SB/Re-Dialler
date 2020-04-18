@@ -4,6 +4,10 @@ import {StyleSheet} from 'react-native';
 import ReButton from '../../components/Button/index';
 
 export default class Starter1 extends React.Component {
+  // Nav to Starter2
+  navToStarter2 = () => {
+    this.props.navigation.navigate('Starter2');
+  };
   render() {
     return (
       <View style={styles.container}>
@@ -13,12 +17,7 @@ export default class Starter1 extends React.Component {
         </View>
 
         <View style={styles.buttonLayout}>
-          <ReButton
-            onClick={() => {
-              this.props.navigation.navigate('Starter2');
-            }}>
-            Get Started >
-          </ReButton>
+          <ReButton onClick={this.navToStarter2}>Get Started ></ReButton>
         </View>
       </View>
     );
