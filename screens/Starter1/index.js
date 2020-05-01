@@ -1,8 +1,7 @@
 import React from 'react';
-import {View, Text} from 'react-native';
 import {StyleSheet} from 'react-native';
 import ReButton from '../../components/Button/index';
-
+import {Layout, Text} from '@ui-kitten/components';
 export default class Starter1 extends React.Component {
   // Nav to Starter2
   navToStarter2 = () => {
@@ -10,16 +9,16 @@ export default class Starter1 extends React.Component {
   };
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.textLayout}>
+      <Layout style={styles.container}>
+        <Layout style={styles.textLayout}>
           <Text style={styles.welcomeText}>Welcome to</Text>
           <Text style={styles.normalText}>Re-dialler</Text>
-        </View>
+        </Layout>
 
-        <View style={styles.buttonLayout}>
+        <Layout style={styles.buttonLayout}>
           <ReButton onClick={this.navToStarter2}>Get Started ></ReButton>
-        </View>
-      </View>
+        </Layout>
+      </Layout>
     );
   }
 }
@@ -27,12 +26,11 @@ export default class Starter1 extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'rgb(33,33,33)',
     alignItems: 'center',
     justifyContent: 'space-around',
   },
   textLayout: {
-    marginTop: 20,
+    marginTop: 40,
     flex: 1,
     alignItems: 'center',
     justifyContent: 'flex-end',
@@ -43,25 +41,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   welcomeText: {
-    color: 'rgb(20, 255, 236)',
     fontSize: 40,
     fontWeight: '400',
     fontFamily: 'Raleway-Regular',
   },
   normalText: {
-    color: 'rgb(20, 255, 236)',
     fontSize: 40,
-    fontFamily: 'Raleway-Bold',
-  },
-  buttonContainer: {
-    backgroundColor: 'rgb(20, 255, 236)',
-    borderRadius: 12,
-  },
-  buttonText: {
-    padding: 15,
-    paddingHorizontal: 40,
-    color: 'rgb(33, 33, 33)',
-    fontSize: 20,
     fontFamily: 'Raleway-Bold',
   },
 });

@@ -13,27 +13,33 @@ import Starter2 from './screens/Starter2/index';
 import History from './screens/History/index';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import * as eva from '@eva-design/eva';
+import {ApplicationProvider} from '@ui-kitten/components';
+import {default as theme} from './custom-theme.json';
 
 const Stack = createStackNavigator();
-
-const appTheme = {
-  dark: true,
-  colors: {
-    background: 'rgb(33,33,33)',
-  },
-};
 
 export default class App extends Component {
   render() {
     return (
-      <NavigationContainer theme={appTheme}>
-        <Stack.Navigator>
-          <Stack.Screen name="Starter1" component={Starter1} />
-          <Stack.Screen name="Starter2" component={Starter2} />
-          <Stack.Screen name="History" component={History} />
-          <Stack.Screen name="Home" component={Home} />
-        </Stack.Navigator>
-      </NavigationContainer>
+      <ApplicationProvider {...eva} theme={{...eva.dark, ...theme}}>
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen
+              options={{headerShown: false}}
+              name="Starter1"
+              component={Starter1}
+            />
+            <Stack.Screen
+              options={{headerShown: false}}
+              name="Starter2"
+              component={Starter2}
+            />
+            <Stack.Screen name="History" component={History} />
+            <Stack.Screen name="Home" component={Home} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </ApplicationProvider>
     );
   }
 }
