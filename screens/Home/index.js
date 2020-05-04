@@ -1,13 +1,24 @@
 import React from 'react';
-import {View, Text} from 'react-native';
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Image} from 'react-native';
+import {
+  Text,
+  TopNavigation,
+  Layout,
+  TopNavigationAction,
+} from '@ui-kitten/components';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+
+// const BackIcon = props => <Icon {...props} name="arrow-back" />;
 
 export default class Home extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Empty Code..!</Text>
-      </View>
+      <>
+        <TopNavigation title="Home" />
+        <Layout style={styles.container}>
+          <Text>Empty Code..!</Text>
+        </Layout>
+      </>
     );
   }
 }
@@ -15,7 +26,6 @@ export default class Home extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },

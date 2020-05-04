@@ -2,6 +2,7 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import ReButton from '../../components/Button/index';
 import {Layout, Text} from '@ui-kitten/components';
+
 export default class Starter1 extends React.Component {
   // Nav to Starter2
   navToStarter2 = () => {
