@@ -28,6 +28,7 @@ export function CustomDrawer(props) {
             accessoryLeft={home => (
               <Icon {...home} name="home" style={styles.navigationIcon} />
             )}
+            onPress={() => props.navigation.navigate('Home')}
           />
 
           <DrawerItem
@@ -40,6 +41,7 @@ export function CustomDrawer(props) {
             accessoryLeft={history => (
               <Icon {...history} style={styles.navigationIcon} name="history" />
             )}
+            onPress={() => props.navigation.navigate('History')}
           />
         </Layout>
       </DrawerContentScrollView>
