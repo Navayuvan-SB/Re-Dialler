@@ -20,6 +20,9 @@ import {default as theme} from './custom-theme.json';
 import AsyncStorage from '@react-native-community/async-storage';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 
+// Custom Drawer
+import {CustomDrawer} from './components/Drawer-Panel/index';
+
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
@@ -48,7 +51,9 @@ export default class App extends Component {
       <ApplicationProvider {...eva} theme={{...eva.dark, ...theme}}>
         <NavigationContainer>
           {this.state.isLoggedIn === 'true' ? (
-            <Drawer.Navigator initialRouteName="Home" drawerType="slide">
+            <Drawer.Navigator
+              drawerType="slide"
+              drawerContent={props => <CustomDrawer {...props} />}>
               <Drawer.Screen name="Home" component={Home} />
               <Drawer.Screen name="History" component={History} />
             </Drawer.Navigator>
