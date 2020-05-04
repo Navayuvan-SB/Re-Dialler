@@ -18,12 +18,35 @@ export function CustomDrawer(props) {
         </Layout>
 
         <Layout style={styles.navigations}>
-          <Text>Navigations</Text>
+          <DrawerItem
+            style={styles.navigationItem}
+            title={tProps => (
+              <Text {...tProps} style={styles.navigationTitle}>
+                Home
+              </Text>
+            )}
+            accessoryLeft={home => (
+              <Icon {...home} name="home" style={styles.navigationIcon} />
+            )}
+          />
+
+          <DrawerItem
+            style={styles.navigationItem}
+            title={tProps => (
+              <Text {...tProps} style={styles.navigationTitle}>
+                History
+              </Text>
+            )}
+            accessoryLeft={history => (
+              <Icon {...history} style={styles.navigationIcon} name="history" />
+            )}
+          />
         </Layout>
       </DrawerContentScrollView>
 
-      <Layout>
-        <Text>This is a text</Text>
+      <Layout style={styles.footer}>
+        <Text style={styles.caption}>Powered by</Text>
+        <Text style={styles.credits}>Cypher Source</Text>
       </Layout>
     </Layout>
   );
@@ -36,6 +59,7 @@ const styles = StyleSheet.create({
   header: {
     flex: 2,
     alignItems: 'center',
+    marginBottom: 40,
   },
   navigations: {
     flex: 4,
@@ -60,5 +84,32 @@ const styles = StyleSheet.create({
     marginTop: 40,
     letterSpacing: 3,
     fontFamily: 'Raleway-Bold',
+  },
+  navigationItem: {
+    marginTop: 10,
+    justifyContent: 'flex-start',
+    marginLeft: 30,
+  },
+  navigationIcon: {
+    fontSize: 35,
+    color: theme['color-primary-600'],
+  },
+  navigationTitle: {
+    marginLeft: 30,
+    fontSize: 20,
+    color: theme['input-text-color'],
+    fontFamily: 'Raleway-SemiBold',
+  },
+  footer: {
+    alignItems: 'center',
+    marginBottom: 40,
+  },
+  caption: {
+    color: 'rgba(247, 240, 245, 0.8)',
+    marginBottom: 7,
+  },
+  credits: {
+    letterSpacing: 1,
+    fontFamily: 'Raleway-SemiBold',
   },
 });
